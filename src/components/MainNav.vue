@@ -4,7 +4,9 @@
       <div
         class="flex flex-nowrap h-full border-b border-solid border-brand-gray-1 px-8 mx-auto"
       >
-        <a href="/" class="flex h-full items-center text-xl">{{ company }}</a>
+        <a :href="url" class="flex h-full items-center text-xl">{{
+          company
+        }}</a>
       </div>
     </div>
   </header>
@@ -16,6 +18,7 @@ export default {
   data() {
     return {
       company: "Google Careers",
+      url: "https://careers.google.com/",
     };
   },
 };
