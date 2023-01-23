@@ -5,6 +5,7 @@
         class="flex flex-nowrap h-full border-b border-solid border-brand-gray-1 px-8 mx-auto"
       >
         <a href="/" class="flex h-full items-center text-xl">{{ company }}</a>
+        <h2 class="ml-8 flex h-full items-center">Developed by {{ author }}</h2>
       </div>
     </div>
   </header>
@@ -16,6 +17,7 @@ export default {
   data() {
     return {
       company: "Google Careers",
+      author: "Fatih Mehmet Baydar",
     };
   },
 };
