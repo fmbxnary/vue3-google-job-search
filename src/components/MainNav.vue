@@ -10,27 +10,14 @@
 
         <nav class="ml-12 h-full">
           <ul class="flex h-full list-none">
-            <li class="h-full">
-              <a href="#" class="flex h-full items-center py-2.5">Teams</a>
-            </li>
-            <li class="ml-9 h-full">
-              <a href="#" class="flex h-full items-center py-2.5">Location</a>
-            </li>
-            <li class="ml-9 h-full">
-              <a href="#" class="flex h-full items-center py-2.5"
-                >Life at Google</a
-              >
-            </li>
-            <li class="ml-9 h-full">
-              <a href="#" class="flex h-full items-center py-2.5"
-                >How we hire</a
-              >
-            </li>
-            <li class="ml-9 h-full">
-              <a href="#" class="flex h-full items-center py-2.5">Students</a>
-            </li>
-            <li class="ml-9 h-full">
-              <a href="#" class="flex h-full items-center py-2.5">Jobs</a>
+            <li
+              v-for="menuItem in menuItems"
+              :key="menuItem.name"
+              class="ml-9 h-full"
+            >
+              <a href="#" class="flex h-full items-center py-2.5">{{
+                menuItem.name
+              }}</a>
             </li>
           </ul>
         </nav>
@@ -46,6 +33,14 @@ export default {
     return {
       company: "Google Careers",
       url: "https://careers.google.com/",
+      menuItems: [
+        { name: "Teams", url: "#" },
+        { name: "Location", url: "#" },
+        { name: "Life at Google", url: "#" },
+        { name: "How we hire", url: "#" },
+        { name: "Students", url: "#" },
+        { name: "Jobs", url: "#" },
+      ],
     };
   },
 };
