@@ -23,7 +23,7 @@
         </nav>
         <div class="ml-auto flex h-full items-center">
           <profile-image v-if="isSignedIn" />
-          <action-button v-else />
+          <action-button v-else @click="SignIn" />
         </div>
       </div>
     </div>
@@ -54,6 +54,11 @@ export default {
       ],
       isSignedIn: false,
     };
+  },
+  methods: {
+    SignIn() {
+      this.isSignedIn = true;
+    },
   },
 };
 </script>
