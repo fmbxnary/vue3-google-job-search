@@ -2,13 +2,19 @@
   <button
     class="rounded border-0 px-5 py-3 font-medium text-white bg-brand-blue-1 hover:shadow-blue"
   >
-    Sign in
+    {{ text }}
   </button>
 </template>
 
 <script>
 export default {
   name: "ActionButton",
+  props: {
+    text: {
+      type: String,
+      default: "Sign in",
+    },
+  },
 };
 </script>
 

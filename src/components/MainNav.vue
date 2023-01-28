@@ -23,7 +23,7 @@
         </nav>
         <div class="ml-auto flex h-full items-center">
           <profile-image v-if="isSignedIn" />
-          <action-button v-else @click="SignIn" />
+          <action-button v-else text="Sign in" @click="SignIn" />
         </div>
       </div>
     </div>
