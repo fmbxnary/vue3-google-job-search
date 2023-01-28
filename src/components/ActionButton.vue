@@ -1,5 +1,6 @@
 <template>
-  <button class="primary">
+  <button :class="{ primary: primary }">
+    // { primary } is a shorthand for { primary: primary }
     {{ text }}
   </button>
 </template>
@@ -12,6 +13,11 @@ export default {
       type: String,
       default: "Sign in",
     },
+  },
+  data() {
+    return {
+      primary: true,
+    };
   },
 };
 </script>
