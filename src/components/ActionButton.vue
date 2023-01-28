@@ -1,6 +1,6 @@
 <template>
   <button :class="{ primary: primary }">
-    // { primary } is a shorthand for { primary: primary }
+    <!-- { primary } is a shorthand for { primary: primary } -->
     {{ text }}
   </button>
 </template>
