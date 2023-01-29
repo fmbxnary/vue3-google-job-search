@@ -1,5 +1,5 @@
 <template>
-  <button :class="{ primary: primary }">
+  <button :class="buttonClass">
     <!-- { primary } is a shorthand for { primary: primary } -->
     {{ text }}
   </button>
@@ -18,6 +18,13 @@ export default {
     return {
       primary: true,
     };
+  },
+  computed: {
+    buttonClass() {
+      return {
+        primary: this.primary,
+      };
+    },
   },
 };
 </script>
