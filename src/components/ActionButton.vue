@@ -23,6 +23,7 @@ export default {
     buttonClass() {
       return {
         primary: this.primary,
+        seconday: !this.primary,
       };
     },
   },
@@ -39,5 +40,6 @@ button {
 }
 
 .seconday {
+  @apply bg-transparent text-brand-blue-1 hover:bg-brand-blue-2 hover:text-white;
 }
 </style>
